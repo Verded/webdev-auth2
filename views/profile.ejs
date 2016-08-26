@@ -1,0 +1,15 @@
+<% include _header %>
+
+<% if ((currentUser) && (currentUser.id === user.id)) { %>
+
+    <a href="/edit" class="pull-right">Edit your profile</a>
+
+<% } %>
+
+<h1><%= user.name() %></h1>
+
+<!-- TODO: use EJS to render user.bio if user.bio exists -->
+
+<p>Joined on <%= user.createdAt %></p>
+
+<% include _footer %>
